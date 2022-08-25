@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+    width: 33vw;
+    height: 55vh;
+    border-radius: 8px;
+    padding: 5vw;
+    color: #465f82;
+    background-color: #fdfcfd;
+}
+
+.wrapper h2 {
+    margin-bottom: 2vh;
+}
+
+.wrapper p {
+    margin-bottom: 5vh;
+}
+
+.wrapper_signup {
+    width: 40vw;
+    height: 58vh;
+    border-radius: 8px;
+    padding: 3vw;
+    color: #465f82;
+    background-color: #fdfcfd;
+}
+
+.wrapper_signup h2 {
+    margin-bottom: 2vh;
+}
+
+.wrapper_signup p {
+    margin-bottom: 5vh;
+}
+
+.link a {
+    text-decoration: none;
+    color: #267fff;
+}
+
+.link {
+    text-decoration: none;
+    margin-top: 3vh;
+}
+
+.login_btn {
+    width: 40%;
+    height: 48px;
+    background-color: #267fff;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 600;
+    padding: 7px;
+}
+
+.login_btn:hover {
+    cursor: pointer;
+    background-color: #1777ff;
+}
+
+input {
+    width: 100%;
+    height: 10%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.login_forms {
+    margin-top: 12vh;
+}
+
+.login_forms img {
+    margin-bottom: 3vh;
+}
+
+.signup_forms {
+    margin-top: 10vh;
+}
+
+.signup_forms img {
+    margin-bottom: 3vh;
+}
+
+.form-group {
+    width: 70%;
+    padding-bottom: 2vh;
+}
+
+.form-group_signup {
+    width: 55%;
+    padding-bottom: 2vh;
+}
+
+.form-group_signup option {
+    color: gray;
+}
+
+.heading a {
+    font-size: 25px;
+    padding: 10px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    box-shadow: 0 1px 10px 1px #2680ff6b;
+    width: 100vw;
+    position: fixed;
+    background-color: white;
+    transition: all 0.5s ease-in-out;
+    z-index: 99;
+}
+
+.logo h1 {
+    cursor: pointer;
+    padding-left: 8vh;
+}
+
+.logo-c {
+    position: absolute;
+    width: 80px;
+    height: 60px;
+    left: 32px;
+    top: 3px;
+}
+
+.nav__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__link {
+    margin: 0 10px;
+    color: rgb(0, 0, 0);
+    padding: 5px 15px;
+    border-radius: 100px;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.nav__link.active,
+.nav__link:hover {
+    background-color: #267fff;
+    color: white;
+}
+
+.section {
+    max-height: 100vh;
+}
+
+.section:nth-child(even) {
+    background-color: rgb(235, 235, 235);
+}
+
+.design {
+    position: absolute;
+    font-size: 125px;
+    color: #267fff;
+    margin: 15.5% 4.2%;
+    font-family: 'Montserrat';
+}
+
+.slogan {
+    font-size: 36px;
+    position: absolute;
+    width: 1095px;
+    height: 129px;
+    margin: 17% 10.3%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 50px;
+}
+
+.slogan span {
+    font-size: 40px;
+    color: #267fff;
+}
+
+.slogan-content {
+    position: absolute;
+    width: 974px;
+    height: 64px;
+    margin: 27% 5%;
+    font-weight: lighter;
+    font-size: 18px;
+    line-height: 30px;
+    color: rgb(97, 97, 97);
+    font-family: 'Poppins';
+    font-style: normal;
+    letter-spacing: 1px;
+}
+
+.button {
+    background-color: #267fff;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 35% 25%;
+    cursor: pointer;
+    border-radius: 30px;
+    height: 3rem;
+    width: 9rem;
+}
+
+.button:hover {
+    background-color: #1777ff;
+    color: #e6e6e6;
+}
+
+.landingimage {
+    position: absolute;
+    left: 55%;
+    top: 30%;
+    mix-blend-mode: multiply;
+}
+
+.scroll {
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    color: #000;
+}
+
+.filled-text {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    z-index: 1;
+    font-size: 100px;
+    font-weight: 600;
+    color: #000;
+}
+
+.outline-text {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    z-index: 3;
+    font-size: 100px;
+    font-weight: 600;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #000;
+    color: transparent;
+}
+
+.scroll-image {
+    position: absolute;
+    top: 50px;
+    left: 600px;
+    z-index: 2;
+    height: 400px;
+    width: auto;
+}
+
+.about_section {
+    max-height: 100%;
+}
+
+.about {
+    height: 55vh;
+    width: 55vw;
+    background-color: #fdfcfd;
+    border-radius: 8px;
+    text-align: center;
+    margin: 10%;
+    padding: 3%;
+}
+
+.about h1 {
+    color: #304f7b;
+}
+
+footer {
+    width: 100%;
+    height: 45vh;
+    background-color: #267fff;
+}
