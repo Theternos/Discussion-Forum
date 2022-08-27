@@ -35,14 +35,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <h1>LINESTO<span>.</span></h1>
         </div>
         <div class="nav__links">
-            <a href="#home" class="active nav__link">Home</a>
+            <a href="main.php" class="active nav__link">Home</a>
             <a href="#services" class="nav__link">Services</a>
             <a href="#about" class="nav__link">About</a>
             <a href="#contact" class="nav__link">Contact Us</a>
             <div class="dropdown">
             <a class="dropbtn" href="profile.php"><span class="material-symbols-rounded">account_circle</span></a>
                 <div class="dropdown-content">
-                    <a href="profile.php">Profile</a>
                     <a href="logout.php">Logout</a>
                 </div>
             </div>
@@ -50,7 +49,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         </div>
     </div>
     <div id="home" class="section">
-       
+        <center><div class="account-details">
+            <div><label>First Name  </label><input type="text" name="fname" required></div>
+            <div><label>Last Name </label><input type="text" name="lname" required></div>
+            <div><label>Area of Interest  </label><input type="text" name="interest" required></div>
+            <div><label>Repeat password*</label><input type="txt" name="name" required></div>
+        </div></center>  
     </div>
     
     <section class="about_section" id="about">
@@ -192,3 +196,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <script src="./js/script.js"></script>
 
 </body>
+
+
+

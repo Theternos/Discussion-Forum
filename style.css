@@ -5,11 +5,12 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    max-width: 100%;
 }
 
 .wrapper {
     width: 33vw;
-    height: 55vh;
+    height: 59vh;
     border-radius: 8px;
     padding: 5vw;
     color: #465f82;
@@ -111,13 +112,13 @@ input {
     padding: 10px;
 }
 
-.navbar {
+.navibar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 50px;
     box-shadow: 0 1px 10px 1px #2680ff6b;
-    width: 100vw;
+    width: 100%;
     position: fixed;
     background-color: white;
     transition: all 0.5s ease-in-out;
@@ -126,7 +127,12 @@ input {
 
 .logo h1 {
     cursor: pointer;
-    padding-left: 8vh;
+    padding-left: 11vh;
+}
+
+.logo span {
+    color: #267fff;
+    font-size: 50px;
 }
 
 .logo-c {
@@ -134,7 +140,7 @@ input {
     width: 80px;
     height: 60px;
     left: 32px;
-    top: 3px;
+    top: 9px;
 }
 
 .nav__links {
@@ -156,6 +162,7 @@ input {
 .nav__link:hover {
     background-color: #267fff;
     color: white;
+    text-decoration: none;
 }
 
 .section {
@@ -276,7 +283,7 @@ input {
 }
 
 .about {
-    height: 55vh;
+    height: 65vh;
     width: 55vw;
     background-color: #fdfcfd;
     border-radius: 8px;
@@ -289,8 +296,272 @@ input {
     color: #304f7b;
 }
 
-footer {
+.footer-section {
+    background: #151414;
+    position: relative;
     width: 100%;
-    height: 45vh;
-    background-color: #267fff;
+}
+
+.footer-cta {
+    border-bottom: 1px solid #373636;
+}
+
+.single-cta i {
+    color: #267fff;
+    font-size: 30px;
+    float: left;
+    margin-top: 8px;
+}
+
+.cta-text {
+    padding-left: 15px;
+    display: inline-block;
+}
+
+.cta-text h4 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.cta-text span {
+    color: #757575;
+    font-size: 15px;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-pattern img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 330px;
+    background-size: cover;
+    background-position: 100% 100%;
+}
+
+.footer-logo {
+    margin-bottom: 30px;
+}
+
+.footer-logo img {
+    max-width: 200px;
+}
+
+.footer-text p {
+    margin-bottom: 14px;
+    font-size: 14px;
+    color: #7e7e7e;
+    line-height: 28px;
+}
+
+.footer-social-icon span {
+    color: #fff;
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+}
+
+.footer-social-icon a {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 15px;
+}
+
+.footer-social-icon i {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+}
+
+.facebook-bg {
+    background: #3B5998;
+}
+
+.twitter-bg {
+    background: #55ACEE;
+}
+
+.google-bg {
+    background: #DD4B39;
+}
+
+.footer-widget-heading h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.footer-widget-heading h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    height: 2px;
+    width: 50px;
+    background: #267fff;
+}
+
+.footer-widget ul li {
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 12px;
+}
+
+.footer-widget ul li a:hover {
+    color: #267fff;
+}
+
+.footer-widget ul li a {
+    color: #878787;
+    text-transform: capitalize;
+}
+
+.subscribe-form {
+    position: relative;
+    overflow: hidden;
+}
+
+.subscribe-form input {
+    width: 100%;
+    padding: 14px 28px;
+    background: #2E2E2E;
+    border: 1px solid #2E2E2E;
+    color: #fff;
+}
+
+.subscribe-form button {
+    position: absolute;
+    right: 0;
+    background: #267fff;
+    padding: 13px 20px;
+    border: 1px solid #267fff;
+    top: 0;
+}
+
+.subscribe-form button i {
+    color: #fff;
+    font-size: 22px;
+    transform: rotate(-6deg);
+}
+
+.copyright-area {
+    background: #202020;
+    padding: 25px 0;
+}
+
+.copyright-text p {
+    margin: 0;
+    font-size: 14px;
+    color: #878787;
+}
+
+.copyright-text p a {
+    color: #267fff;
+}
+
+.footer-menu li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.footer-menu li:hover a {
+    color: #267fff;
+}
+
+.footer-menu li a {
+    font-size: 14px;
+    color: #878787;
+}
+
+.footer-menu a:hover {
+    text-decoration: none;
+}
+
+.copyright-text a:hover {
+    text-decoration: none;
+    color: #1777ff;
+}
+
+.footer-widget a:hover {
+    text-decoration: none;
+}
+
+.nav__links span {
+    font-size: 33px;
+    color: #000;
+    padding-top: 5px;
+}
+
+.nav__links span:hover {
+    color: #1777ff;
+}
+
+.dropbtn {
+    color: white;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    margin-right: 25px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.account-details {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50vw;
+    height: 100vh;
+    justify-content: space-between;
+    padding-top: 2vh;
+}
+
+.account-details>div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
+.account-details input,
+.account-details label {
+    width: 100%;
 }
