@@ -107,7 +107,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <body><center>
     <section class="login_forms">
         <img src="./assets/logo.png" alt="Logo">
-        <div class="wrapper">
+        <div class="wrapper_login">
             <h2><b>Welcome Back</b></h2>
             
             <p>Please enter your credentials to access your account.</p>

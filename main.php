@@ -30,17 +30,28 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </style>
     <!-- partial:index.partial.html -->
     <div class="navibar">
-        <img class="logo-c" src="./assets/logo.png" width="80%" height="80%">
+        <img class="logo-cc" src="./assets/logo.png" width="80%" height="80%">
         <div class="logo">
             <h1>LINESTO<span>.</span></h1>
         </div>
         <div class="nav__links">
+        <a href="./forum.php" class="nav__link">Dashboard</a>
             <a href="#home" class="active nav__link">Home</a>
             <a href="#services" class="nav__link">Services</a>
             <a href="#about" class="nav__link">About</a>
             <a href="#contact" class="nav__link">Contact Us</a>
             <div class="dropdown">
-            <a class="dropbtn" href="profile.php"><span class="material-symbols-rounded">account_circle</span></a>
+            <a class="dropbtn" href="profile.php">
+                <div class="circle1">
+                    <h5>
+                        <?php
+                            $name = $_SESSION['username'];
+                            $f_letter = strtoupper($name[0]);
+                            echo $f_letter; 
+                        ?>
+                    </h5>
+                </div>
+            </a>
                 <div class="dropdown-content">
                     <a href="profile.php">Profile</a>
                     <a href="logout.php">Logout</a>
@@ -55,7 +66,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     
     <section class="about_section" id="about">
         <center>
-
+            
         </center>
     </section>
     

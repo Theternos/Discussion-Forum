@@ -29,6 +29,7 @@
             <a href="#services" class="nav__link">Services</a>
             <a href="#about" class="nav__link">About</a>
             <a href="#contact" class="nav__link">Contact Us</a>
+            <a href="./forum_auth.php" class="nav__link">Forum</a>
             <a href="login.php" class="nav__link">Login</a>
         </div>
     </div>
