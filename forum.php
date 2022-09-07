@@ -148,8 +148,16 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
                     $value11= $_POST['Oil_gas'];
                     $value12 = $_POST['Others'];
                     
-                    
+                    if($value1 =="" && $value2 =="" && $value3 =="" && $value4 =="" && $value5 =="" && $value6 =="" && $value7 =="" && $value8 =="" && $value9 =="" && $value10 =="" && $value11 == "" && $value12 == "" ){
+                    $sql = "SELECT * FROM comments ORDER BY id DESC";
+
+                    }
+
+
+                    else{
                     $sql = "SELECT * FROM comments WHERE sector = '$value1$value2$value3$value4$value5$value6$value7$value8$value9$value10$value11$value12' ORDER BY id DESC";
+                }
+
                     $result = mysqli_query($link, $sql);
                     if (mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {
