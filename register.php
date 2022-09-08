@@ -117,8 +117,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <body><center><section class="signup_forms">
 <img src="./assets/logo.png" alt="Logo">
     <div class="wrapper_signup">
-        <b><h2>Set up your account</h2></b>
-        <p>Let's get our journey started.</p>
+        <b><h3>Set up your account</h3></b>
+        <p>Join us and start your journey with us.</p>
         <div class="investor">
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                 <div class="form-group_signup">

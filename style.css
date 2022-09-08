@@ -10,24 +10,27 @@
 }
 
 .wrapper_login {
-    width: 33vw;
-    height: 59vh;
+    width: 30vw;
+    height: 55vh;
     border-radius: 8px;
-    padding: 5vw;
+    padding: 3vw;
     color: #465f82;
     background-color: #fdfcfd;
 }
 
-.wrapper_login h2 {
-    margin-bottom: 2vh;
+.wrapper_login h3 {
+    margin-bottom: 10%;
 }
 
 .wrapper_login p {
-    margin-bottom: 5vh;
+    margin-bottom: 7%;
+    font-size: small;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .wrapper_signup {
-    width: 40vw;
+    width: 35vw;
     height: 58vh;
     border-radius: 8px;
     padding: 3vw;
@@ -35,12 +38,13 @@
     background-color: #fdfcfd;
 }
 
-.wrapper_signup h2 {
+.wrapper_signup h3 {
     margin-bottom: 2vh;
 }
 
 .wrapper_signup p {
     margin-bottom: 5vh;
+    font-size: 14px;
 }
 
 .link a {
@@ -51,6 +55,7 @@
 .link {
     text-decoration: none;
     margin-top: 3vh;
+    font-size: smaller;
 }
 
 .login_btn {
@@ -61,7 +66,9 @@
     color: #fff;
     letter-spacing: 1px;
     font-weight: 600;
-    padding: 7px;
+    padding: 2%;
+    font-weight: 200;
+    font-size: medium;
 }
 
 .login_btn:hover {
@@ -75,15 +82,16 @@ input {
     margin-bottom: 20px;
     padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 7px;
 }
 
 .login_forms {
-    margin-top: 12vh;
+    margin-top: 2vh;
 }
 
 .login_forms img {
     margin-bottom: 3vh;
+    margin-top: 10vh;
 }
 
 .signup_forms {
@@ -94,13 +102,21 @@ input {
     margin-bottom: 3vh;
 }
 
+.form-group input {
+    height: 6vh;
+}
+
+.form-group_signup input {
+    height: 5.7vh;
+}
+
 .form-group {
-    width: 70%;
+    width: 65%;
     padding-bottom: 2vh;
 }
 
 .form-group_signup {
-    width: 55%;
+    width: 70%;
     padding-bottom: 2vh;
 }
 
@@ -120,36 +136,37 @@ input {
     padding: 10px 50px;
     box-shadow: 0 1px 10px 1px #2680ff6b;
     width: 100%;
+    height: 10vh;
     position: fixed;
     background-color: white;
     transition: all 0.5s ease-in-out;
     z-index: 99;
 }
 
-.logo h1 {
+.logo h2 {
     cursor: pointer;
-    padding-left: 8vh;
+    padding-left: 7vh;
 }
 
 .logo span {
     color: #267fff;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .logo-c {
     position: absolute;
-    width: 80px;
-    height: 60px;
+    width: 70px;
+    height: 50px;
     left: 32px;
     top: 9px;
 }
 
 .logo-cc {
     position: absolute;
-    width: 80px;
-    height: 60px;
-    left: 32px;
-    top: 19px;
+    width: 70px;
+    height: 50px;
+    left: 5vh;
+    top: 1.1vh;
 }
 
 .nav__links {
@@ -165,6 +182,10 @@ input {
     border-radius: 100px;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
+}
+
+.nav__links a {
+    font-size: 13px;
 }
 
 .nav__link.active,
@@ -775,6 +796,10 @@ input {
     width: 300px;
     height: 50px;
     background-color: #1777ff;
+}
+
+.dropdown_cntn p {
+    font-size: 15px;
 }
 
 .sidebar_content {

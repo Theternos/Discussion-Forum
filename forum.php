@@ -49,9 +49,9 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
 <body>
     <section class="bo_dy">
         <div class="navibar" id="#forum">
-            <img class="logo-cc" src="./assets/logo.png" width="80%" height="80%">
+            <img class="logo-cc" src="./assets/logo.png" width="70%" height="70%">
             <div class="logo">
-                <h1>LINESTO<span>.</span></h1>
+                <h2>LINESTO<span>.</span></h2>
             </div>
             <div class="nav__links">
                 <a href="./forum.php" class="active nav__link">Dashboard</a>
