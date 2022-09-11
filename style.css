@@ -745,7 +745,7 @@ input {
 .sidebar_left {
     width: 20%;
     padding: 20px;
-    position: absolute;
+    position: fixed;
     min-height: 82vh;
     background-color: #fdfcfd;
     box-shadow: 0 1px 10px 1px #2680ff6b;
@@ -753,6 +753,14 @@ input {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.sidebar_left::-webkit-scrollbar {
+    display: none;
 }
 
 .sidebar_left h3 {
@@ -804,12 +812,19 @@ input {
 
 .sidebar_content {
     position: relative;
-    min-height: 82vh;
+    max-height: 72vh;
     flex-direction: column;
+    overflow-y: scroll;
 }
 
 .sidebar_content button {
     margin-top: 21px;
+    font-size: 13px;
+}
+
+.fa-dot-circle-o {
+    margin-right: 2px;
+    font-size: small;
 }
 
 select {
@@ -839,7 +854,7 @@ select:hover {
 .sidebar_right {
     width: 20%;
     padding: 20px;
-    position: absolute;
+    position: fixed;
     height: 82vh;
     background-color: #fdfcfd;
     box-shadow: 0 1px 10px 1px #2680ff6b;
@@ -849,9 +864,9 @@ select:hover {
     flex-direction: column;
     overflow-y: scroll;
     overflow-x: hidden;
-    scrollbar-width: 0px;
 }
 
+.sidebar_left::-webkit-scrollbar,
 .sidebar_right::-webkit-scrollbar {
     display: none;
 }
@@ -860,7 +875,7 @@ select:hover {
     text-align: center;
 }
 
-.sidebar_right button {
+.usr_display {
     width: 90%;
     height: 40px;
     margin-left: 5%;
@@ -878,7 +893,7 @@ select:hover {
     color: rgb(0, 0, 0);
 }
 
-.sidebar_right button:hover {
+.usr_display:hover {
     color: #267fff;
     text-decoration: none;
     display: block;
@@ -1063,4 +1078,109 @@ select:hover {
 
 .is--hidden {
     display: none;
+}
+
+.searchresult {
+    position: absolute;
+    padding-left: 20px;
+    background-color: rgb(228, 227, 227);
+    width: 60px;
+    height: 35px;
+}
+
+.chatting {
+    width: 300px;
+    height: 300px;
+}
+
+.fromuser {
+    float: right;
+    width: 100%;
+    height: fit-content;
+    color: #fff;
+    background-color: #267fff;
+    font-size: small;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 1px;
+    font-weight: lighter;
+    padding-left: 7px;
+}
+
+.touser {
+    float: left;
+    width: 100%;
+    height: fit-content;
+    color: #000;
+    background-color: #ccc;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 1px;
+    font-size: small;
+    padding-left: 7px;
+    font-weight: lighter;
+}
+
+.chatter {
+    padding-bottom: 20px;
+    display: flex;
+    overflow-y: scroll;
+    position: sticky;
+    max-height: 75vh;
+}
+
+.chattt {
+    margin-top: 0%;
+    width: 230px;
+    padding-left: 5px;
+    padding-top: 4px;
+    padding-right: 25px;
+    border-radius: 20px;
+    margin-left: 5px;
+    top: 2%;
+}
+
+.chat_title {
+    display: flex;
+    flex-direction: row;
+    background-color: #edf4ff;
+    border-radius: 20px;
+    position: sticky;
+    width: 300px;
+    left: 72vw;
+    margin-top: 50px;
+}
+
+.chat_title p {
+    margin-left: 10px;
+    margin-top: 3px;
+}
+
+.reply_bttn {
+    position: absolute;
+    margin-top: 0px;
+    margin-right: 20px;
+    font-size: 15px;
+    color: #000;
+    width: 30px;
+    height: 32px;
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+    float: right;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.chat_total {
+    display: flex;
+    flex-direction: column;
+    width: 1500px;
+}
+
+.conversation {
+    margin-left: 73.5vw;
+    margin-top: 1%;
 }

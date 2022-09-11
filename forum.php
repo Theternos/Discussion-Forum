@@ -38,6 +38,7 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,1,200" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <style>
     .bo_dy{
@@ -233,8 +234,8 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
                     }
                
                     ?>  
-                    </div>
                     
+                    </div>
 <?php
                 }
             }
@@ -247,26 +248,29 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
                 <h3>Chat</h3>
                 <div class="search">
                     <span class="fa fa-search"></span>
-                    <textarea class="search_chat" id="comment" name="comment" placeholder="Search Here..." required></textarea>
+                    <textarea type="text" autocomplete="off" class="search_chat" id="live_search" name="comment" placeholder="Search Here..." required></textarea>
+                  <?php  for($w = 0; $w < 3; $w++) { ?> 
+                    <p id="searchresult"></p>
+                   <?php
+                 } ?>
+            
                 </div>
                 <?php
                 $name = $_SESSION["username"];
-                $sql = "SELECT username FROM users WHERE username != '$name' ORDER BY id DESC";
+                $sql = "SELECT username FROM users WHERE username != '$name' ORDER BY username";
                 $result = mysqli_query($link, $sql);
                 if (mysqli_num_rows($result) > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
 
                 ?>
                 <div class="single_item">
-                <form action="ui.php" method="POST" class="form">
+                <form action="chat.php" method="POST" class="form">
                     <input type="hidden" name='Touser' value='<?php echo $row['username']; ?>'>
-                    <button name="user_btn" ><h6><?php echo $row['username']; ?></h6></button>
+                    <button class="usr_display" name="user_btn" ><h6><?php echo $row['username']; ?></h6></button>
                 </form>
                 </div>
-                <?php
-                $chatuser = $_POST[$row['username']];
-                echo $chatuser;
-                ?>
+                
+
                 <?php
 
                     }
@@ -277,6 +281,35 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
             
         </section>
     </section>
+
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#live_search").keyup(function(){
+                var input = $(this).val();
+                if(input != ""){   
+                    $.ajax({
+                        url: "livesearch.php",
+                        method: "POST",
+                        data: {input:input},
+
+                        success: function(data){
+                            $("#searchresult").html(data);
+                            $("#searchresult").css("display","block");
+                            $("#searchresult").css("padding-left","33px");
+                            $("#searchresult").css("padding-bottom","10px");
+
+                        }
+                    }); //  return databases
+                }
+                else{
+                    $("#searchresult").css("display","none");
+
+                }
+            });
+        });
+    </script>
+    
 	<footer id="contact" class="footer-section">
         <div class="container">
             <div class="footer-cta pt-5 pb-5">
