@@ -20,7 +20,6 @@ if(isset($_POST["input"])) {
                 
         </tbody>
 
-
 <?php
     }}
     else {

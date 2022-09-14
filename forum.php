@@ -39,6 +39,8 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,1,200" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
 
 <style>
     .bo_dy{
@@ -157,6 +159,8 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
 
                     else{
                     $sql = "SELECT * FROM comments WHERE sector = '$value1$value2$value3$value4$value5$value6$value7$value8$value9$value10$value11$value12' ORDER BY id DESC";
+                    
+
                 }
 
                     $result = mysqli_query($link, $sql);
@@ -172,10 +176,19 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
                                 $name = $row['name'];
                                 $f_letter = strtoupper($name[0]);
                                 echo $f_letter; 
+                                $row_id = $row['id'];
+                                $sqll = "SELECT COUNT(likes) AS 'count' FROM likes WHERE parent_id = $row_id";
+                                $resultt = mysqli_query($link, $sqll);
+                                $roww = mysqli_fetch_assoc($resultt);
+                                $count = $roww['count']; 
                             ?>
                         </h5>
                     </div>
-                        <h4><a href=""><?php echo $row['name']; ?></a></h4>
+                    <form action="chat.php" method="POST" class="form">
+                        <input type="hidden" name='Touser' value='<?php echo $row['name']; ?>'>
+                        <button class="reply_username" name="user_btn"><h6><?php echo $row['name']; ?></h6></button>
+                    </form>
+
                     </div>
                         <p><?php echo $row['comment']; ?></p><div class="lcr">
                         <table class="lke_rply">
@@ -184,7 +197,7 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
                                     <form action="likcmt.php" method="POST" class="form">
                                         <input type="hidden" name="like" value="1"> 
                                         <input type="hidden" name="row_id" value="<?php echo $row['id'] ?>"> 
-                                        <button class="like_btn"><i class="fa fa-heart"></i> <?php  echo $row['likes'] ?> Likes</button>
+                                        <button class="like_btn"><i class="fa fa-heart"></i> <?php  echo $count ?> Likes</button>
                                     </form>
                                 </td>
                                     <form action="likcmt.php" method="POST" class="form">
@@ -221,7 +234,10 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
                             ?>
                         </h5>
                     </div>
-                        <h4><a href=""><?php echo $row1['name']; ?></a></h4>
+                    <form action="chat.php" method="POST" class="form">
+                        <input type="hidden" name='Touser' value='<?php echo $row1['name']; ?>'>
+                        <button class="reply_username" name="user_btn"><h6><?php echo $row1['name']; ?></h6></button>
+                    </form>
                     </div>
                                 <p><?php echo $row1['comment']; ?></p>
                         <p class="created_at_reply"><?php echo $row1['created_at']; ?></p>
@@ -244,7 +260,7 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
             </div>
         </center>
     
-        <div class="sidebar_right">
+        <div id="container" class="sidebar_right">
                 <h3>Chat</h3>
                 <div class="search">
                     <span class="fa fa-search"></span>
@@ -261,7 +277,6 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
                 $result = mysqli_query($link, $sql);
                 if (mysqli_num_rows($result) > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
-
                 ?>
                 <div class="single_item">
                 <form action="chat.php" method="POST" class="form">
@@ -298,7 +313,6 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
                             $("#searchresult").css("display","block");
                             $("#searchresult").css("padding-left","33px");
                             $("#searchresult").css("padding-bottom","10px");
-
                         }
                     }); //  return databases
                 }
