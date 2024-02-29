@@ -36,6 +36,7 @@ error_reporting(0);
                 $result = mysqli_query($link, $sql);
             }
         }
+    header("location: forum.php");
     }
 
     $sql = "SELECT * FROM users WHERE username = '".$_SESSION['username']."'";
@@ -53,6 +54,5 @@ error_reporting(0);
     $sql = "SELECT * FROM users WHERE username = $name";
     $result = mysqli_query($link, $sql);
     $user_id = mysqli_fetch_assoc($result);
-    header("location: forum.php")
-
+    header("location: forum.php");
 ?>
