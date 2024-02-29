@@ -4,7 +4,7 @@ Welcome to the Discussion Forum repository! This platform serves as an environme
 
 ## Overview
 
-The Discussion Forum offers the following features and functionalities:
+The Discussion Forum offers the following features and functionalities: 
 
 - **Threaded Discussions**: Users can pose issues for discussion and respond to contributions, creating threaded discussions that branch out into subthreads.
 - **Clear Communication**: Say goodbye to cluttered inboxes! Our forum presents responses in a clear, chronological order, making it easy to follow discussions.
